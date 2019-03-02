@@ -49,8 +49,6 @@ def get_stream_data(n):
 	return 0                                                        #ruft erst die globale Variable auf um diese dann zu beschreiben
 
 
-#system('livestreamer https://www.twitch.tv/ishano best -o'+channel_user_id)
-
 date = datetime.datetime.now().strftime("%y_%m_%d_%H_%M")
 livestreamer = "livestreamer"
 twitch = ' "https://www.twitch.tv/'
