@@ -19,16 +19,17 @@ channel_language = ""       #Platzhaltervariable
 channel_thumbnail_url = ""  #Platzhaltervariable
 channel_tag_ids = ""        #Platzhaltervariable
 
-path = '" YOUR_OWN_PATH'
+path = ' /media/Atlas/Streamaufzeichnungen/'
+client_id = "xz11rw6womly5keyi2zkm4ebw03px1"
 
 date = datetime.datetime.now().strftime("%y_%m_%d_%H_%M")
 twitch = ' "https://www.twitch.tv/'
-Dateiname = date + ".mpg"
+dataname = date + ".mpg"
 
 # channel_user_login = "larsfest" #Gibt an welcher Channel ?berpr?ft werden soll
 
 def get_stream_data(n):
-	client = TwitchHelix(client_id='YOUR_OWN_CLIENTID_FROM_TWITCH') #ClientID vom Script f?r Twitch (Auth)
+	client = TwitchHelix(client_id=client_id) #ClientID vom Script f?r Twitch (Auth)
 	streams_iterator = client.get_streams(page_size=100, user_logins=n) #Reqeust aller Streamdaten als iterator (Zeiger)
 	for stream in islice(streams_iterator, 0, 500):			#islice spaltet den iterator in die Variablen auf
 		global channel_user_id                                  #ruft erst die globale Variable auf um diese dann zu beschreiben
@@ -61,7 +62,8 @@ def get_stream_data(n):
 
 def record(n):
 	print(date+":"+ n + " is live and will be recorded")
-	os.system("livestreamer"+twitch+n+path+n+"/"+" --http-ignore-env")
+	os.system("livestreamer" + twitch + n + '"' + " best -o" + path + n + "/" + dataname + " --http-ignore-env")
+
 
 def main():
 	n = input("Welchen Streamer möchtest du aufnehmen? ")
