@@ -21,7 +21,7 @@ channel_tag_ids = ""        #Platzhaltervariable
 # channel_user_login = "larsfest" #Gibt an welcher Channel ?berpr?ft werden soll
 
 def get_stream_data(n):
-	client = TwitchHelix(client_id='xz11rw6womly5keyi2zkm4ebw03px1') #ClientID vom Script f?r Twitch (Auth)
+	client = TwitchHelix(client_id='YOUR_OWN_CLIENTID_FROM_TWITCH') #ClientID vom Script f?r Twitch (Auth)
 	streams_iterator = client.get_streams(page_size=100, user_logins=n) #Reqeust aller Streamdaten als iterator (Zeiger)
 	for stream in islice(streams_iterator, 0, 500):			#islice spaltet den iterator in die Variablen auf
 		global channel_user_id                                  #ruft erst die globale Variable auf um diese dann zu beschreiben
