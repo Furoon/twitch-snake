@@ -7,7 +7,7 @@ Python 3 https://www.python.org/
 Python Twitch Client from tsifrer https://github.com/tsifrer/python-twitch-client
 Livestreamer https://github.com/chrippa/livestreamer
 
-# Usgae
+# Usage
 After you had installed all packages you need to change the variable "path". The path variable declares the path where a record should be saved. All Records will be saved in the best Quality that twitch delivers. After change you must open the script declare which stream you would to record and thats all. Have fun.
 
 # Disclaimer
