@@ -19,8 +19,8 @@ channel_language = ""       #Platzhaltervariable
 channel_thumbnail_url = ""  #Platzhaltervariable
 channel_tag_ids = ""        #Platzhaltervariable
 
-path = ' /media/Atlas/Streamaufzeichnungen/'
-client_id = "xz11rw6womly5keyi2zkm4ebw03px1"
+path = ' YOUR_OWN'
+client_id = "YOU_OWN"
 
 date = datetime.datetime.now().strftime("%y_%m_%d_%H_%M")
 twitch = ' "https://www.twitch.tv/'
