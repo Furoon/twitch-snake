@@ -6,6 +6,7 @@ import os
 import datetime
 import time
 
+
 channel_user_id = ""	    #Platzhaltervariable
 channel_user_name = ""      #Platzhaltervariable
 channel_game_id = ""        #Platzhaltervariable
@@ -17,6 +18,12 @@ channel_started_at = ""     #Platzhaltervariable
 channel_language = ""       #Platzhaltervariable
 channel_thumbnail_url = ""  #Platzhaltervariable
 channel_tag_ids = ""        #Platzhaltervariable
+
+path = '" YOUR_OWN_PATH'
+
+date = datetime.datetime.now().strftime("%y_%m_%d_%H_%M")
+twitch = ' "https://www.twitch.tv/'
+Dateiname = date + ".mpg"
 
 # channel_user_login = "larsfest" #Gibt an welcher Channel ?berpr?ft werden soll
 
@@ -49,18 +56,12 @@ def get_stream_data(n):
 	return 0                                                        #ruft erst die globale Variable auf um diese dann zu beschreiben
 
 
-date = datetime.datetime.now().strftime("%y_%m_%d_%H_%M")
-livestreamer = "livestreamer"
-twitch = ' "https://www.twitch.tv/'
-pfad = '" best -o /media/Atlas/Streamaufzeichnungen/'
-#http_enviro = " --http-ignore-env"
-Dateiname = date + ".mpg"
-livestreamerArgs = "livestreamer"+twitch+channel_user_name+pfad+channel_user_name+"/"+" --http-ignore-env"
+
 
 
 def record(n):
 	print(date+":"+ n + " is live and will be recorded")
-	os.system("livestreamer"+twitch+n+pfad+n+"/"+" --http-ignore-env")
+	os.system("livestreamer"+twitch+n+path+n+"/"+" --http-ignore-env")
 
 def main():
 	n = input("Welchen Streamer möchtest du aufnehmen? ")
