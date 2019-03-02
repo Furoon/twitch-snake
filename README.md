@@ -1,4 +1,4 @@
-# twitch_helper
+# A twitch snake
 A little python helper to record streams directly from twitch.
 
 # Installation
