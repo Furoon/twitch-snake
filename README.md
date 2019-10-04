@@ -13,4 +13,4 @@ Edit the script, you need to change the variable "path" and "client_id". The Pat
 After you had installed all packages and edited the variables you had to execute the script. All Records will be saved in the best Quality that twitch delivers. Have fun.
 
 # Disclaimer
-This tool is only for streamer who want to record her own stream for quality purposes or something else. If you had rights to any of the packages and doesn't want a link to your Git, pls write a request.
+This tool is only for streamer who want to record their own stream for quality purposes or something else. If you had rights to any of the packages and doesn't want a link to your Git, pls write a request.
